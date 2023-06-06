@@ -1,0 +1,105 @@
+.profilePage {
+    padding-top: 70px;
+}
+
+.profilePageWrapper {
+    margin: 1rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.profilePageWrapper .c1 {
+    border-top: 6px solid var(--main-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 4px;
+    color: black;
+    width: 25%;
+    padding: 2rem;
+}
+
+.c1 .c1r0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.c1 .c1r0 img {
+    width: 60%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #222;
+}
+
+.c1 .c1r0 .profilePageStatusg {
+    padding: .5rem 1rem;
+    background: gold;
+    border-radius: 6px;
+    width: 80%;
+    text-align: center;
+}
+
+.c1 .c1r0 .profilePageStatusd {
+    padding: .5rem 1rem;
+    background: springgreen;
+    border-radius: 6px;
+    width: 80%;
+    text-align: center;
+}
+
+.c1r1 {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.c1r1 .ppmd {
+    width: 100%;
+    overflow: auto;
+    margin: .35rem;
+    padding: .35rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.c2r1Wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.c2r1 .upperMargin {
+    font-weight: 600;
+    margin: .5rem 0;
+}
+
+.c2r1Inside {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.c2r1Inside p {
+    border-left: 4px solid var(--main-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 4px;
+    flex: 1;
+    padding: .5rem 1rem;
+    min-width: 300px;
+}
+
+.profilePageWrapper .c2 {
+    width: 75%;
+}
+
+@media (max-width: 800px) {
+    .profilePageWrapper {
+        flex-direction: column;
+    }
+
+    .profilePageWrapper .c1 {
+        width: 100%;
+    }
+
+    .profilePageWrapper .c2 {
+        width: 100%;
+    }
+}

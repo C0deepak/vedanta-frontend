@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useReducer } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { initialState, reducer } from './reducer/UseReducer'
+import Footer from './components/Footer'
+import Logout from './components/Logout'
+import Navbar from './components/Navbar'
+import Auth from './pages/auth/Auth'
+import Home from './pages/home/Home'
+import Profile from './pages/profile/Profile'
+import ScanQr from './pages/ScanQr'
 
-function App() {
+export const UserContext = createContext()
+const Routing = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/auth' element={<Auth />} />
+      <Route path='/profile' element={<Profile />} />
+      <Route path='/logout' element={<Logout />} />
+      {/* <Route path='/scanqr' element={<ScanQr />} /> */}
+    </Routes>
+  )
 }
 
-export default App;
+const App = () => {
+  const [state, dispatch] = useReducer(reducer, initialState)
+
+  return (
+    <>
+      <UserContext.Provider value={{ state, dispatch }}>
+        <Router>
+          <Navbar />
+          <Routing />
+          <Footer />
+        </Router>
+      </UserContext.Provider>
+    </>
+  )
+}
+
+export default App
