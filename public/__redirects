@@ -1,1 +1,3 @@
-/api/* /index.html 200
+/api/* https://vedantaqr.netlify.app/:splat 200
+
+/* /index.html 200
