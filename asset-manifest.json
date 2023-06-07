@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/vedanta-frontend/static/css/main.b440f5d9.css",
+    "main.js": "/vedanta-frontend/static/js/main.86992299.js",
+    "static/media/landing.png": "/vedanta-frontend/static/media/landing.2368c809307562786934.png",
+    "index.html": "/vedanta-frontend/index.html",
+    "main.b440f5d9.css.map": "/vedanta-frontend/static/css/main.b440f5d9.css.map",
+    "main.86992299.js.map": "/vedanta-frontend/static/js/main.86992299.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b440f5d9.css",
+    "static/js/main.86992299.js"
+  ]
+}
